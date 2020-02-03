@@ -1,0 +1,309 @@
+{
+	"comment": "Sample component configuration",
+	"components": {
+		"Welcome Component": {
+			"window": {
+				"url": "http://localhost:8000/",
+				"affinity": "workspaceComponents",
+				"frame": false,
+				"resizable": true,
+				"autoShow": true,
+				"top": "center",
+				"left": "center",
+				"width": 400,
+				"height": 432
+			},
+			"component": {
+				"displayName": "Counterparty",
+				"spawnOnStartup": false
+			},
+			"foreign": {
+				"services": {
+					"windowService": {
+						"allowSnapping": true,
+						"allowGrouping": true,
+						"allowAutoArrange": true,
+						"allowMinimize": true
+					}
+				},
+				"components": {
+					"App Launcher": {
+						"launchableByUser": true
+					},
+					"Window Manager": {
+						"showLinker": true,
+						"FSBLHeader": true,
+						"persistWindowState": true,
+						"title": "Counterparty viewer"
+					},
+					"Toolbar": {
+						"iconClass": "ff-component"
+					}
+				}
+			}
+		},
+		"FX Chart": {
+			"window": {
+				"url": "https://uk.tradingview.com/chart/",
+				"windowType": "FX Chart",
+				"height": 500,
+				"width": 500,
+				"frame": true
+			},
+			"foreign": {
+				"services": {
+					"workspaceService": {
+						"persistURL": true
+					},
+					"windowService": {
+						"allowSnapping": true,
+						"allowGrouping": true,
+						"allowAutoArrange": false,
+						"allowMinimize": true
+					}
+				},
+				"components": {
+					"App Launcher": {
+						"launchableByUser": true
+					},
+					"Window Manager": {
+						"showLinker": true,
+						"FSBLHeader": true,
+						"persistWindowState": true,
+						"title": "FX Chart"
+					}
+				}
+			}
+		},
+		"grid": {
+			"window": {
+				"url": "http://localhost:3000/",
+				"resizable": false,
+				"frame": true,
+				"movable": false,
+				"autoShow": false,
+				"bottom": "0",
+				"left": "0",
+				"right": 0,
+				"height": 500
+			},
+			"foreign": {
+				"services": {
+					"workspaceService": {
+						"persistURL": true
+					},
+					"windowService": {
+						"allowSnapping": true,
+						"allowGrouping": true,
+						"allowAutoArrange": false,
+						"allowMinimize": true
+					}
+				},
+				"components": {
+					"App Launcher": {
+						"launchableByUser": true
+					},
+					"Window Manager": {
+						"showLinker": true,
+						"FSBLHeader": true,
+						"persistWindowState": true,
+						"title": "Orders"
+					}
+				}
+			}
+		},
+		"maya": {
+			"window": {
+				"url": "http://localhost:3333/",
+				"frame": true,
+				"resizable": true,
+				"movable": false,
+				"autoShow": false,
+				"bottom": "0",
+				"top": 100,
+				"left": "0",
+				"right": 0,
+				"height": 500
+			},
+			"foreign": {
+				"services": {
+					"workspaceService": {
+						"persistURL": true
+					}
+				},
+				"components": {
+					"App Launcher": {
+						"launchableByUser": true
+					},
+					"Window Manager": {
+						"showLinker": true,
+						"FSBLHeader": true,
+						"persistWindowState": true,
+						"title": "Maya"
+					}
+				}
+			}
+		},
+		"nonConfiguredComponent": {
+			"window": {
+				"url": "$applicationRoot/components/nonConfiguredComponent/nonConfiguredComponent.html",
+				"affinity": "systemComponents",
+				"frame": false,
+				"resizable": true,
+				"autoShow": true,
+				"top": "center",
+				"left": "center",
+				"width": 400,
+				"height": 432
+			},
+			"foreign": {
+				"services": {
+					"workspaceService": {
+						"persistURL": true
+					}
+				},
+				"components": {
+					"App Launcher": {
+						"launchableByUser": true
+					},
+					"Window Manager": {
+						"showLinker": true,
+						"FSBLHeader": true,
+						"persistWindowState": true,
+						"title": "Nom"
+					}
+				}
+			}
+		},
+		"Notepad": {
+			"window": {
+				"windowType": "assimilation",
+				"path": "notepad.exe",
+				"defaultHeight": 600,
+				"autoShow": true,
+				"resizable": true,
+				"showTaskbarIcon": false,
+				"contextMenu": true,
+				"addToWorkspace": true,
+				"options": {
+					"alwaysOnTop": false
+				}
+			},
+			"component": {
+				"spawnOnHotkey": ["ctrl", "alt", "n"]
+			},
+			"foreign": {
+				"services": {
+					"windowService": {
+						"allowAutoArrange": true
+					}
+				},
+				"components": {
+					"App Launcher": {
+						"launchableByUser": true
+					},
+					"Window Manager": {
+						"persistWindowState": false,
+						"FSBLHeader": true
+					},
+					"Toolbar": {
+						"iconURL": "$applicationRoot/assets/img/notepad.png"
+					}
+				}
+			}
+		},
+		"Getting Started Tutorial": {
+			"window": {
+				"url": "https://www.chartiq.com/tutorials/?slug=finsemble",
+				"height": 800,
+				"width": 1000
+			},
+			"component": {
+				"spawnOnStartup": false
+			},
+			"foreign": {
+				"services": {
+					"workspaceService": {
+						"persistURL": true
+					}
+				},
+				"components": {
+					"App Launcher": {
+						"launchableByUser": true
+					},
+					"Window Manager": {
+						"showLinker": false,
+						"FSBLHeader": true,
+						"persistWindowState": true,
+						"title": "Finsemble Getting Started Tutorial"
+					}
+				}
+			}
+		},
+		"Finsemble Documentation": {
+			"window": {
+				"url": "http://documentation.chartiq.com/finsemble",
+				"left": "center",
+				"top": "center",
+				"height": 800,
+				"width": 1000
+			},
+			"component": {},
+			"foreign": {
+				"services": {
+					"workspaceService": {
+						"persistURL": true
+					}
+				},
+				"components": {
+					"App Launcher": {
+						"launchableByUser": true
+					},
+					"Window Manager": {
+						"showLinker": false,
+						"FSBLHeader": true,
+						"persistWindowState": true,
+						"title": "Finsemble Documentation"
+					}
+				}
+			}
+		},
+		"defaultAuthentication": {
+			"window": {
+				"url": "$applicationRoot/components/authentication/defaultAuthentication.html",
+				"top": "center",
+				"left": "center",
+				"width": 358,
+				"height": 658,
+				"ephemeral": true,
+				"options": {
+					"autoShow": false
+				}
+			},
+			"component": {
+				"neededClients": [
+					"LauncherClient",
+					"AuthenticationClient",
+					"StorageClient"
+				],
+				"category": "system"
+			},
+			"foreign": {
+				"services": {
+					"windowService": {
+						"allowAutoArrange": false
+					}
+				},
+				"components": {
+					"App Launcher": {
+						"launchableByUser": false
+					},
+					"Window Manager": {
+						"FSBLHeader": false,
+						"persistWindowState": false
+					}
+				}
+			}
+		}
+	}
+}
