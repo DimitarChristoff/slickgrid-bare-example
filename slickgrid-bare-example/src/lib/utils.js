@@ -39,8 +39,12 @@ const priceFormatter = (r, c, value, col, context) =>
     value
   ).format('0,000.000')}</div>`;
 
-const volumeFormatter = (r, c, value) => console.log(value) || numeral(value).format('0.00 a');
-
+const volumeFormatter = (r, c, value) => numeral(value).format('0.00 a');
+const symbolFormatter = (r, c, value, col, item) => console.log(item) || `<button href="#" class="button is-small intent-bookmark ${item.fav ? 'is-danger is-inverted' : ''}">
+  <i class="fa fa-bookmark" aria-hidden="true"></i>
+</button><button href="#" class="button is-small intent-viewChart">
+  <i class="fa fa-bar-chart" aria-hidden="true"></i>
+</button><div>${value}</div>`;
 const dateFormatter = (r, c, value) =>
   fecha.format(new Date(value), 'D/MM/YYYY');
 const timeFormatter = (r, c, value) => fecha.format(new Date(value), 'HH:MM');
@@ -124,5 +128,6 @@ export {
   priceFormatter,
   percentFormatter,
   timeFormatter,
-  volumeFormatter
+  volumeFormatter,
+  symbolFormatter
 };

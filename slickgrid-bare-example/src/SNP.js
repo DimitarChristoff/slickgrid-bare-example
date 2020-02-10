@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Data from 'slickgrid-bare/dist/data';
-import Grid from 'slickgrid-bare/dist/6pac';
+import Grid from 'slickgrid-bare/dist/frozen';
 import _ from 'lodash';
 import Dimensions from 'react-dimensions';
 import {
@@ -9,7 +9,7 @@ import {
   priceFormatter,
   percentFormatter,
   volumeFormatter,
-  dateFormatter,
+  symbolFormatter,
   timeFormatter,
   rates
 } from './lib/utils';
@@ -20,12 +20,11 @@ const options = {
   enableAddRow: !true,
   enableCellNavigation: true,
   // asyncEditorLoading: false,
-  enableAsyncPostRender: false,
+  enableAsyncPostRender: !false,
   autoEdit: false,
   forceFitColumns: true,
   showHeaderRow: true,
   headerRowHeight: 32,
-  frozenColumn: 0,
   explicitInitialization: true
 };
 
@@ -81,6 +80,10 @@ const columns = [
       case 'time':
         formatter = timeFormatter;
         break;
+    }
+    if (field === 'symbol'){
+      cssClass = 'is-actions';
+      formatter = symbolFormatter;
     }
     const colDef = {
       id: field,
@@ -207,9 +210,24 @@ class SNP extends React.Component {
     });
 
     grid.onClick.subscribe((e, {row, column}) => {
+      if (e.target.classList.contains('intent-bookmark')){
+        const item= dv.getItem(row);
+        item.fav = item.fav ? false : true;
+        dv.updateItem(item.id, item);
+        grid.invalidateRow(row);
+        grid.render()
+        return;
+      }
+
+      if (!e.target.classList.contains('intent-viewChart'))
+        return;
       const cell = grid.getCellFromEvent(e);
       if (grid.getColumns()[cell.cell].id == 'symbol') {
         const {symbol} = dv.getItem(row);
+
+        window.FSBL.Clients.LauncherClient.getComponentsThatCanReceiveDataTypes({dataTypes: 'Chart'}, (_, response) =>{
+          console.log(response);
+        });
         window.FSBL.Clients.LauncherClient.showWindow(
           {
             windowName: `${symbol}`,
@@ -218,7 +236,7 @@ class SNP extends React.Component {
           {
             spawnIfNotFound: true,
             dockOnSpawn: true,
-            name: `${symbol}`,
+            name: symbol,
             url: `https://uk.tradingview.com/chart/?symbol=${symbol}`
           }
         );

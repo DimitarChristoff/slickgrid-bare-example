@@ -65,7 +65,7 @@ html {
   }
 }
 
-body div#root, {
+body div#root {
   display: flex;
   align-content: stretch;
   flex-direction: column;
@@ -78,10 +78,32 @@ body div#root, {
 
 /*
  * IMPORTANT:
- * In order to preserve the uniform grid appearance, all cell styles need to have padding, margin and border sizes.
+ * In order to preserve the uniform grid appearance, all cell styles need to have padding§, margin and border sizes.
  * No built-in (selected, editable, highlight, flashing, invalid, loading, :focus) or user-specified CSS
  * classes should alter those!
  */
+
+div.is-actions {
+  padding: 0 !important;
+  display: flex;
+  button {
+    height: 100%;
+    border: 0;
+    border-right: 1px solid $grid-border-color;
+    padding: 6px;
+    i {
+      pointer-events: none;
+    }
+  }
+  div {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+    padding-left: $cell-padding-left;
+  }
+}
 
 div.tile {
   margin: 0 !important;
@@ -94,7 +116,8 @@ div.tile.is-parent {
 
 div.tile.is-vertical > div.tile.is-child {
   border: 1px solid $border;
-  &:not(:last-child), &:not(:first-child) {
+  &:not(:last-child),
+  &:not(:first-child) {
     margin-bottom: 0 !important;
   }
 }
