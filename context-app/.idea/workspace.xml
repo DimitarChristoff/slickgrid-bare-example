@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a4cb1ef-ac94-4edd-a611-f3937a7ce697" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../finsemble-seed/configs/application/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/../finsemble-seed/configs/application/components.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../finsemble-seed/configs/application/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../finsemble-seed/configs/application/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/src/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/src/lib/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +19,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1XIdsP1Zr0u4PW6uacYRl578Vgr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -65,7 +70,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580737748848</updated>
-      <workItem from="1580737750690" duration="5151000" />
+      <workItem from="1580737750690" duration="9560000" />
+      <workItem from="1581331118499" duration="2118000" />
     </task>
     <servers />
   </component>

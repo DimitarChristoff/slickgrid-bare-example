@@ -20,8 +20,8 @@
 											"appID": "welcome-comp"
 										},
 										"5": {
-											"name": "Grid",
-											"appId": "grid"
+											"name": "Orders",
+											"appId": "Orders"
 										},
 										"2": {
 											"name": "Getting Started Tutorial",
@@ -34,6 +34,10 @@
 										"4": {
 											"name": "Notepad",
 											"appID": "note"
+										},
+										"6": {
+											"name": "SNP",
+											"appId": "SNP"
 										}
 									}
 								},

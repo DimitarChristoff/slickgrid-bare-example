@@ -3,49 +3,67 @@ import { Context } from "./Store";
 import "./App.css";
 
 const App = () => {
-  const handleClientChange = e => {
+  const [client, setClient] = React.useState();
+  const handleChange = ({ target }) => {
+    setClient(target.value);
+  };
+  const handleFilterChange = counterparty => {
     window.FSBL.Clients.LinkerClient.publish({
-      dataType: "counterparty",
-      data: { counterparty: e.target.value }
+      dataType: "filter",
+      data: { counterparty: client || counterparty }
     });
   };
   return (
     <Context.Consumer>
-      {({ counterparty, clients }) => (
-        <div className="card" style={{ flex: 1, height: "100%" }}>
-          <header className="card-header">
-            <p className="card-header-title">
-              <div className="select">
-                {clients.length !== 0 && (
-                  <select onChange={handleClientChange} value={counterparty}>
-                    {clients.map(client => (
-                      <option value={client}>{client}</option>
-                    ))}
-                  </select>
-                )}
+      {({ counterparty, id, currency, clients, paymentDate, price, amount }) =>
+        counterparty ? (
+          <div className="card" style={{ flex: 1, minHeight: "100%", flexDirection: 'column' }}>
+            <header className="card-header">
+              <p className="card-header-title">
+                <div className="select">
+                  {clients.length !== 0 && (
+                    <select defaultValue={client} onChange={handleChange}>
+                      {clients.map(client => (
+                        <option value={client}>{client}</option>
+                      ))}
+                    </select>
+                  )}
+                </div>
+              </p>
+              <a
+                href="#"
+                className="card-header-icon"
+                aria-label="more options"
+              >
+                <span className="icon">
+                  <i className="fas fa-angle-down" aria-hidden="true" />
+                </span>
+              </a>
+            </header>
+            <div className="card-content" style={{ flex: 1 }}>
+              <div className="content">
+                <h1 className={"title"}>GBP{currency}</h1>
+                <h2 className="subtitle is-5">
+                  {amount} @ {price}
+                </h2>
+                <br />
+                <time dateTime={paymentDate} />
               </div>
-            </p>
-            <a href="#" className="card-header-icon" aria-label="more options">
-              <span className="icon">
-                <i className="fas fa-angle-down" aria-hidden="true" />
-              </span>
-            </a>
-          </header>
-          <div className="card-content" style={{ flex: 1 }}>
-            <div className="content" style={{ flex: 1 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              nec iaculis mauris.
-              <a href="#">@bulmaio</a>. <a href="#">#css</a>{" "}
-              <a href="#">#responsive</a>
-              <br />
-              <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
             </div>
+            <footer className="card-footer">
+              <a className="card-footer-item">Close</a>
+              <a
+                onClick={() => handleFilterChange(counterparty)}
+                className="card-footer-item"
+              >
+                Show trades
+              </a>
+            </footer>
           </div>
-          <footer className="card-footer">
-            <a className="card-footer-item">Save</a>
-          </footer>
-        </div>
-      )}
+        ) : (
+          <div className="loader" />
+        )
+      }
     </Context.Consumer>
   );
 };

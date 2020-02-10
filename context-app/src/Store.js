@@ -1,20 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-const Context = React.createContext({clients: []});
+const Context = React.createContext({ clients: [] });
 export { Context };
 
 const Store = ({ children }) => {
-  const [state, setState] = useState({clients: []});
+  const [state, setState] = useState({ clients: [] });
   useEffect(() => {
     if (window.FSBL) {
       window.FSBL.Clients.LinkerClient.subscribe("counterparty", payload => {
-        if (payload.counterparty) {
-          setState(old => ({ ...old, counterparty: payload.counterparty }));
-        }
-        if (payload.currency) {
-          setState(old => ({ ...old, currency: payload.currency }));
-        }
+        setState(old => ({ ...old, ...payload }));
       });
 
       window.FSBL.Clients.LinkerClient.subscribe("SOTW", payload => {

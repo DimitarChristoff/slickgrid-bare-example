@@ -42,10 +42,10 @@
 				}
 			}
 		},
-		"FX Chart": {
+		"Chart": {
 			"window": {
 				"url": "https://uk.tradingview.com/chart/",
-				"windowType": "FX Chart",
+				"windowType": "Chart",
 				"height": 500,
 				"width": 500,
 				"frame": true
@@ -70,15 +70,15 @@
 						"showLinker": true,
 						"FSBLHeader": true,
 						"persistWindowState": true,
-						"title": "FX Chart"
+						"title": "Chart"
 					}
 				}
 			}
 		},
-		"grid": {
+		"Orders": {
 			"window": {
-				"url": "http://localhost:3000/",
-				"resizable": false,
+				"url": "http://localhost:3000/components/orders",
+				"resizable": true,
 				"frame": true,
 				"movable": false,
 				"autoShow": false,
@@ -108,6 +108,43 @@
 						"FSBLHeader": true,
 						"persistWindowState": true,
 						"title": "Orders"
+					}
+				}
+			}
+		},
+		"SNP": {
+			"window": {
+				"url": "http://localhost:3000/components/snp",
+				"resizable": true,
+				"frame": true,
+				"movable": false,
+				"autoShow": false,
+				"top": "0",
+				"left": "0",
+				"right": 0,
+				"height": 500
+			},
+			"foreign": {
+				"services": {
+					"workspaceService": {
+						"persistURL": true
+					},
+					"windowService": {
+						"allowSnapping": true,
+						"allowGrouping": true,
+						"allowAutoArrange": false,
+						"allowMinimize": true
+					}
+				},
+				"components": {
+					"App Launcher": {
+						"launchableByUser": true
+					},
+					"Window Manager": {
+						"showLinker": true,
+						"FSBLHeader": true,
+						"persistWindowState": true,
+						"title": "SNP 500"
 					}
 				}
 			}

@@ -59,6 +59,12 @@ dv.getItemMetadata = index => {
 const sortable = true;
 const columns = [
   {
+    id: 'id',
+    name: 'Trade Id',
+    field: 'id',
+    maxWidth: 120
+  },
+  {
     id: 'type',
     name: 'Side',
     sortable,
@@ -152,7 +158,7 @@ const columns = [
   },
   {
     id: 'health',
-    name: 'Health',
+    name: 'Risk',
     field: 'health',
     cssClass: 'is-hidden-mobile',
     headerCssClass: 'is-hidden-mobile',
@@ -233,7 +239,7 @@ class Home extends React.Component {
       columns,
       options
     ));
-    columns[6].formatter = columns[6].formatter.bind(this.gridInstance);
+    columns[7].formatter = columns[7].formatter.bind(this.gridInstance);
 
     const changeFilter = _.debounce(value => {
       healthValue = value;
@@ -313,7 +319,7 @@ class Home extends React.Component {
         window.FSBL.Clients.LauncherClient.showWindow(
           {
             windowName: `GBP${currency}`,
-            componentType: 'FX Chart'
+            componentType: 'Chart'
           },
           {
             spawnIfNotFound: true,
@@ -343,7 +349,7 @@ class Home extends React.Component {
         data: companyNames
       });
 
-      window.FSBL.Clients.LinkerClient.subscribe("counterparty", payload => {
+      window.FSBL.Clients.LinkerClient.subscribe("filter", payload => {
         if (payload.counterparty) {
           columnFilters.counterparty = payload.counterparty;
           dv.refresh();
@@ -358,7 +364,7 @@ class Home extends React.Component {
 
     window.FSBL.Clients.LinkerClient.publish({
       dataType: 'counterparty',
-      data: {counterparty: item.counterparty, currency: item.currency}
+      data: item
     });
 
     window.FSBL.Clients.LinkerClient.publish({
@@ -423,10 +429,9 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div style={{height: this.props.containerHeight + 'px'}}>
+      <div style={{height: this.props.containerHeight}} className={'resizer'}>
         <div
-          id="myGrid"
-          className="slickgrid-container"
+          className="slickgrid-container mygrid"
           ref={grid => (this.grid = grid)}
         />
       </div>
