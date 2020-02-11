@@ -40,7 +40,7 @@ const priceFormatter = (r, c, value, col, context) =>
   ).format('0,000.000')}</div>`;
 
 const volumeFormatter = (r, c, value) => numeral(value).format('0.00 a');
-const symbolFormatter = (r, c, value, col, item) => console.log(item) || `<button href="#" class="button is-small intent-bookmark ${item.fav ? 'is-danger is-inverted' : ''}">
+const symbolFormatter = (r, c, value, col, item) => `<button href="#" class="button is-small intent-bookmark ${item.fav ? 'is-danger is-inverted' : ''}">
   <i class="fa fa-bookmark" aria-hidden="true"></i>
 </button><button href="#" class="button is-small intent-viewChart">
   <i class="fa fa-bar-chart" aria-hidden="true"></i>

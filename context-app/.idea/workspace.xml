@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a4cb1ef-ac94-4edd-a611-f3937a7ce697" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../slickgrid-bare-example/src/components/FSBLoader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/src/SNP.js" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/src/SNP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/src/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/src/lib/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1580737748848</updated>
       <workItem from="1580737750690" duration="9560000" />
-      <workItem from="1581331118499" duration="3178000" />
+      <workItem from="1581331118499" duration="3659000" />
     </task>
     <servers />
   </component>

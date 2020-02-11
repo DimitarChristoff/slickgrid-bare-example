@@ -4,36 +4,52 @@ import './index.scss';
 import Orders from './App';
 import SNP from './SNP';
 import * as serviceWorker from './serviceWorker';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import {Helmet} from 'react-helmet';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import FSBLoader from './components/FSBLoader';
+
+function generateUID() {
+  // I generate the UID from two parts here
+  // to ensure the random number provide enough bits.
+  var firstPart = (Math.random() * 46656) | 0;
+  var secondPart = (Math.random() * 46656) | 0;
+  firstPart = ('000' + firstPart.toString(36)).slice(-3);
+  secondPart = ('000' + secondPart.toString(36)).slice(-3);
+  return firstPart + secondPart;
+}
 
 ReactDOM.render(
-  <Router>
-    <Switch>
-      <Route path={'/components/snp'}>
-        <SNP />
-      </Route>
-      <Route path={'/components/orders'}>
-        <Orders />
-      </Route>
-      <Route exact path="/">
-        <div className="tile is-parent is-vertical">
-          <div className="tile is-child">
-            <Orders/>
+  <FSBLoader>
+    <Router>
+      <Switch>
+        <Route path={'/components/snp'}>
+          <Helmet>
+            <title>SNP 500 viewer</title>
+          </Helmet>
+          <SNP />
+        </Route>
+        <Route path={'/components/orders'}>
+          <Helmet>
+            <title>Order Book</title>
+          </Helmet>
+          <Orders />
+        </Route>
+        <Route exact path="/">
+          <div className="tile is-parent is-vertical">
+            <div className="tile is-child">
+              <Orders />
+            </div>
+            <div className="tile is-child">
+              <SNP />
+            </div>
           </div>
-          <div className="tile is-child">
-            <SNP/>
-          </div>
-        </div>
-      </Route>
-    </Switch>
+        </Route>
+      </Switch>
+    </Router>
+  </FSBLoader>,
 
-  </Router>
-  , document.getElementById('root'));
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

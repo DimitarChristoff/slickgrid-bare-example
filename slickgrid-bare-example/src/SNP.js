@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Data from 'slickgrid-bare/dist/data';
-import Grid from 'slickgrid-bare/dist/frozen';
+import Grid from 'slickgrid-bare/dist/6pac';
 import _ from 'lodash';
 import Dimensions from 'react-dimensions';
 import {
@@ -13,6 +13,7 @@ import {
   timeFormatter,
   rates
 } from './lib/utils';
+import FSBLoader from './components/FSBLoader';
 
 const options = {
   rowHeight: 32,
@@ -81,7 +82,7 @@ const columns = [
         formatter = timeFormatter;
         break;
     }
-    if (field === 'symbol'){
+    if (field === 'symbol') {
       cssClass = 'is-actions';
       formatter = symbolFormatter;
     }
@@ -149,11 +150,10 @@ class SNP extends React.Component {
     this.gridInstance.setColumns(columns);
   };
 
-  state = {
-    editing: null
-  };
+  static contextType = FSBLoader;
 
   componentDidMount() {
+    this.FSBL = this.context;
     const grid = (this.gridInstance = new Grid(
       this.grid,
       dv,
@@ -201,7 +201,7 @@ class SNP extends React.Component {
     });
 
     grid.onActiveCellChanged.subscribe((e, {row}) => {
-      this.registerInterest(dv.getItem(row));
+      // this.registerInterest(dv.getItem(row));
     });
 
     dv.onRowsChanged.subscribe((e, {rows}) => {
@@ -210,24 +210,21 @@ class SNP extends React.Component {
     });
 
     grid.onClick.subscribe((e, {row, column}) => {
-      if (e.target.classList.contains('intent-bookmark')){
-        const item= dv.getItem(row);
-        item.fav = item.fav ? false : true;
-        dv.updateItem(item.id, item);
-        grid.invalidateRow(row);
-        grid.render()
-        return;
+      if (e.target.classList.contains('intent-bookmark')) {
+        this.bookmark(row);
       }
 
-      if (!e.target.classList.contains('intent-viewChart'))
-        return;
+      if (!e.target.classList.contains('intent-viewChart')) return;
       const cell = grid.getCellFromEvent(e);
       if (grid.getColumns()[cell.cell].id == 'symbol') {
         const {symbol} = dv.getItem(row);
 
-        window.FSBL.Clients.LauncherClient.getComponentsThatCanReceiveDataTypes({dataTypes: 'Chart'}, (_, response) =>{
-          console.log(response);
-        });
+        this.FSBL.Clients.LauncherClient.getComponentsThatCanReceiveDataTypes(
+          {dataTypes: 'Chart'},
+          (_, response) => {
+            console.log(response);
+          }
+        );
         window.FSBL.Clients.LauncherClient.showWindow(
           {
             windowName: `${symbol}`,
@@ -244,48 +241,49 @@ class SNP extends React.Component {
     });
 
     dv.setItems(data);
-    console.log(dv.getItems()[1]);
     grid.init();
-
-    window.addEventListener('resize', this.handleResize);
 
     // this.mutate();
     this.grid = grid;
-    console.log(dv.getItems());
-    //this.setFSBL();
+
+    window.addEventListener('resize', this.handleResize);
+    this.setFSBL();
   }
+
+  bookmark = row => {
+    const item = dv.getItem(row);
+    item.fav = item.fav ? false : true;
+    dv.updateItem(item.id, item);
+    this.grid.invalidateRow(row);
+    this.grid.render();
+
+    if (!window.FSBL) return;
+
+    window.FSBL.Clients.LinkerClient.publish({
+      dataType: 'addToWatchlist',
+      data: {id: item.symbol, fav: item.fav}
+    });
+
+    alert('event sent');
+  };
 
   setFSBL = () => {
     if (!window.FSBL) return;
     // cant message before ready is fired across the apps.
-    window.FSBL.addEventListener('onReady', () => {
-      window.FSBL.Clients.LinkerClient.publish({
-        dataType: 'SOTW',
-        data: companyNames
-      });
+    window.FSBL.Clients.LinkerClient.subscribe(
+      'addToWatchlist',
+      (payload, envelope) => {
+        alert(window.FSBL.Clients.RouterClient.getClientName());
+        if (envelope.originatedHere()) return;
 
-      window.FSBL.Clients.LinkerClient.subscribe('filter', payload => {
-        if (payload.counterparty) {
-          columnFilters.counterparty = payload.counterparty;
+        if (payload.id) {
+          const item = dv.getItemById(payload.id);
+          item.fav = payload.fav;
+          dv.updateItem(item.id, item);
           dv.refresh();
-          this.grid.setColumns(this.grid.getColumns());
         }
-      });
-    });
-  };
-
-  registerInterest = item => {
-    if (!window.FSBL) return;
-
-    window.FSBL.Clients.LinkerClient.publish({
-      dataType: 'counterparty',
-      data: item
-    });
-
-    window.FSBL.Clients.LinkerClient.publish({
-      dataType: 'SOTW',
-      data: companyNames
-    });
+      }
+    );
   };
 
   componentWillUnmount() {
@@ -305,5 +303,7 @@ class SNP extends React.Component {
     );
   }
 }
+
+
 
 export default Dimensions()(SNP);
