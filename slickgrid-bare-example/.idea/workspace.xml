@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9be66af0-3809-4ee5-9db1-0bc200828892" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/FSBLoader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../context-app/.env.local" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/defaultWebpackConfig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/vendor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.adapters.entries.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.adapters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.components.entries.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.components.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.finsemble-built-in.entries.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.preloads.entries.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.preloads.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.services.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.titleBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.vendor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.local" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../context-app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../context-app/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SNP.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SNP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +94,7 @@
       <workItem from="1580398128257" duration="1474000" />
       <workItem from="1580478968569" duration="580000" />
       <workItem from="1580479842614" duration="21391000" />
-      <workItem from="1581331119418" duration="11050000" />
+      <workItem from="1581331119418" duration="12348000" />
     </task>
     <servers />
   </component>
@@ -107,22 +115,26 @@
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state x="676" y="411" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1920.1177@0.23.1920.1177" timestamp="1580482703001" />
-    <state width="1899" height="161" key="GridCell.Tab.0.bottom" timestamp="1581421916495">
-      <screen x="0" y="23" width="1920" height="1177" />
+    <state width="1659" height="161" key="GridCell.Tab.0.bottom" timestamp="1581434796864">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1899" height="161" key="GridCell.Tab.0.bottom/0.23.1920.1177@0.23.1920.1177" timestamp="1581421916495" />
-    <state width="1899" height="161" key="GridCell.Tab.0.center" timestamp="1581421916413">
-      <screen x="0" y="23" width="1920" height="1177" />
+    <state width="1659" height="161" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1581434796864" />
+    <state width="1659" height="161" key="GridCell.Tab.0.center" timestamp="1581434796862">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1899" height="161" key="GridCell.Tab.0.center/0.23.1920.1177@0.23.1920.1177" timestamp="1581421916413" />
-    <state width="1899" height="161" key="GridCell.Tab.0.left" timestamp="1581421916413">
-      <screen x="0" y="23" width="1920" height="1177" />
+    <state width="1659" height="161" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1581434796862" />
+    <state width="1659" height="161" key="GridCell.Tab.0.left" timestamp="1581434796861">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1899" height="161" key="GridCell.Tab.0.left/0.23.1920.1177@0.23.1920.1177" timestamp="1581421916413" />
-    <state width="1899" height="161" key="GridCell.Tab.0.right" timestamp="1581421916413">
-      <screen x="0" y="23" width="1920" height="1177" />
+    <state width="1659" height="161" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1581434796861" />
+    <state width="1659" height="161" key="GridCell.Tab.0.right" timestamp="1581434796863">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1899" height="161" key="GridCell.Tab.0.right/0.23.1920.1177@0.23.1920.1177" timestamp="1581421916413" />
+    <state width="1659" height="161" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1581434796863" />
     <state x="461" y="250" key="SettingsEditor" timestamp="1581343334237">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
