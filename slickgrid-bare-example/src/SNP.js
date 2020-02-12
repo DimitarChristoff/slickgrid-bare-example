@@ -219,7 +219,7 @@ class SNP extends React.Component {
       if (grid.getColumns()[cell.cell].id == 'symbol') {
         const {symbol} = dv.getItem(row);
 
-        this.FSBL.Clients.LauncherClient.getComponentsThatCanReceiveDataTypes(
+        window.FSBL.Clients.LauncherClient.getComponentsThatCanReceiveDataTypes(
           {dataTypes: 'Chart'},
           (_, response) => {
             console.log(response);

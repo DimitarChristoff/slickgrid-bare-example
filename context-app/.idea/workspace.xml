@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a4cb1ef-ac94-4edd-a611-f3937a7ce697" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/defaultWebpackConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/vendor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.adapters.entries.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.adapters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.components.entries.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.components.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.finsemble-built-in.entries.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.preloads.entries.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.preloads.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.titleBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.vendor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../slickgrid-bare-example/.env.local" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../slickgrid-bare-example/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../slickgrid-bare-example/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3a4cb1ef-ac94-4edd-a611-f3937a7ce697" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

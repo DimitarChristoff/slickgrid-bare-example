@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9be66af0-3809-4ee5-9db1-0bc200828892" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../context-app/.env.local" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/defaultWebpackConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/vendor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.adapters.entries.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.adapters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.components.entries.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.components.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.finsemble-built-in.entries.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.preloads.entries.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.preloads.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.titleBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../finsemble-seed/build/webpack/webpack.vendor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.local" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../context-app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../context-app/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SNP.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SNP.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +80,7 @@
       <workItem from="1580398128257" duration="1474000" />
       <workItem from="1580478968569" duration="580000" />
       <workItem from="1580479842614" duration="21391000" />
-      <workItem from="1581331119418" duration="12348000" />
+      <workItem from="1581331119418" duration="12448000" />
     </task>
     <servers />
   </component>
