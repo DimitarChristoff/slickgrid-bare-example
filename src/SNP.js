@@ -1,8 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import ReactDOM from 'react-dom';
 import Data from 'slickgrid-bare/dist/data';
 import Grid from 'slickgrid-bare/dist/6pac';
-import _ from 'lodash';
 import Dimensions from 'react-dimensions';
 import {
   symbols,
