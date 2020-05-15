@@ -22,6 +22,11 @@ $cell-padding-left: 10px;
   display: flex;
 }
 
+//todo - fix 6pac viewport size detection for scrollbar issue
+.slick-viewport {
+  overflow-x: hidden !important;
+}
+
 .mygrid {
   width: 100%;
   flex: 1;

@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import ReactDOM from 'react-dom';
-import {Data, Grid} from 'slickgrid-bare';
+import Data from 'slickgrid-bare/dist/data';
+import Grid from 'slickgrid-bare/dist/6pac';
 import Faker from 'faker';
 import _ from 'lodash';
-import Dimensions from 'react-dimensions';
 import {
   amountFormatter,
   countryFormatter,
@@ -25,7 +25,7 @@ const options = {
   // asyncEditorLoading: false,
   enableAsyncPostRender: true,
   autoEdit: false,
-  forceFitColumns: true,
+  forceFitColumns: !false,
   showHeaderRow: true,
   headerRowHeight: 32,
   explicitInitialization: true
@@ -163,7 +163,8 @@ const columns = [
     cssClass: 'is-hidden-mobile',
     headerCssClass: 'is-hidden-mobile',
     formatter: healthFormatter,
-    sortable: true
+    sortable: true,
+    minWidth: 200
   }
 ];
 
@@ -229,7 +230,9 @@ class Home extends React.Component {
   };
 
   state = {
-    editing: null
+    editing: null,
+    width: '100%',
+    height: '100%'
   };
 
   componentDidMount() {
@@ -239,6 +242,18 @@ class Home extends React.Component {
       columns,
       options
     ));
+    this.rootnode = this.grid.parentNode.parentNode;
+
+    this.sizer = new ResizeObserver(entities => {
+      const {height, width} = entities[0].contentRect;
+      this.setState({
+        width,
+        height
+      })
+    });
+
+    this.sizer.observe(this.rootnode);
+
     columns[7].formatter = columns[7].formatter.bind(this.gridInstance);
 
     const changeFilter = _.debounce(value => {
@@ -421,6 +436,8 @@ class Home extends React.Component {
     this._timer = setTimeout(this.mutate, _.random(100, 1000));
   };
 
+
+
   componentWillUnmount() {
     clearTimeout(this._timer);
     this.gridInstance.destroy();
@@ -429,7 +446,7 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div style={{height: this.props.containerHeight}} className={'resizer'}>
+      <div style={{height: this.state.height, width: this.state.width}} className={'resizer'}>
         <div
           className="slickgrid-container mygrid"
           ref={grid => (this.grid = grid)}
@@ -439,4 +456,4 @@ class Home extends React.Component {
   }
 }
 
-export default Dimensions()(Home);
+export default Home;

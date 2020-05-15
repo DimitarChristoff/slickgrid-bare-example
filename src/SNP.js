@@ -2,7 +2,6 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 import Data from 'slickgrid-bare/dist/data';
 import Grid from 'slickgrid-bare/dist/6pac';
-import Dimensions from 'react-dimensions';
 import {
   symbols,
   priceFormatter,
@@ -143,11 +142,18 @@ class Filter extends React.Component {
 
 // main!
 class SNP extends React.Component {
+  state = {
+    height: '100%',
+    width: '100%'
+  };
+
   rates = Object.keys(rates);
 
-  handleResize = () => {
-    this.gridInstance.setColumns(columns);
-  };
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (this.state.height !== prevState.height || this.state.width !== prevState.width){
+      this.gridInstance.resizeCanvas();
+    }
+  }
 
   static contextType = FSBLoader;
 
@@ -160,10 +166,17 @@ class SNP extends React.Component {
       options
     ));
 
-    // const changeFilter = _.debounce(value => {
-    //   healthValue = value;
-    //   dv.refresh();
-    // }, 500);
+    this.rootnode = this.grid.parentNode.parentNode;
+
+    this.sizer = new ResizeObserver(entities => {
+      const {height, width} = entities[0].contentRect;
+      this.setState({
+        width,
+        height
+      })
+    });
+
+    this.sizer.observe(this.rootnode);
 
     grid.onHeaderRowCellRendered.subscribe((e, {node, column}) => {
       ReactDOM.render(
@@ -254,8 +267,8 @@ class SNP extends React.Component {
     const item = dv.getItem(row);
     item.fav = item.fav ? false : true;
     dv.updateItem(item.id, item);
-    this.grid.invalidateRow(row);
-    this.grid.render();
+    this.gridInstance.invalidateRow(row);
+    this.gridInstance.render();
 
     if (!window.FSBL) return;
 
@@ -294,7 +307,7 @@ class SNP extends React.Component {
 
   render() {
     return (
-      <div style={{height: this.props.containerHeight}} className={'resizer'}>
+      <div style={{height: this.state.height}} className={'resizer'}>
         <div
           className="slickgrid-container mygrid"
           ref={grid => (this.grid = grid)}
@@ -304,6 +317,4 @@ class SNP extends React.Component {
   }
 }
 
-
-
-export default Dimensions()(SNP);
+export default SNP;
