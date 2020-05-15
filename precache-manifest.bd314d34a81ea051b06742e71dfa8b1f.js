@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7b4fdb2bed393380ba9ea713313ab456",
+    "revision": "3e09b17c44a6a725e3439957483596b1",
     "url": "/slickgrid-bare-example/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/slickgrid-bare-example/static/css/2.8e6990bc.chunk.css"
   },
   {
-    "revision": "d96034ae564db1e38ef4",
+    "revision": "0afef6fa2fd032143c8c",
     "url": "/slickgrid-bare-example/static/css/main.c8287051.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/slickgrid-bare-example/static/js/2.eeb2d1ec.chunk.js.LICENSE"
   },
   {
-    "revision": "d96034ae564db1e38ef4",
-    "url": "/slickgrid-bare-example/static/js/main.e9145665.chunk.js"
+    "revision": "0afef6fa2fd032143c8c",
+    "url": "/slickgrid-bare-example/static/js/main.8892384e.chunk.js"
   },
   {
     "revision": "56de288375c94cb6562a",

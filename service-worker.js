@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/slickgrid-bare-example/precache-manifest.c8b8256a4b5bbee3455d5d88abd49aa2.js"
+  "/slickgrid-bare-example/precache-manifest.bd314d34a81ea051b06742e71dfa8b1f.js"
 );
 
 self.addEventListener('message', (event) => {
