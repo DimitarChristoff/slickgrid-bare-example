@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.3410e775.chunk.css",
-    "main.js": "/static/js/main.a8448480.chunk.js",
-    "main.js.map": "/static/js/main.a8448480.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.4563b125.js",
-    "runtime-main.js.map": "/static/js/runtime-main.4563b125.js.map",
-    "static/css/2.030c3e4d.chunk.css": "/static/css/2.030c3e4d.chunk.css",
-    "static/js/2.eeb2d1ec.chunk.js": "/static/js/2.eeb2d1ec.chunk.js",
-    "static/js/2.eeb2d1ec.chunk.js.map": "/static/js/2.eeb2d1ec.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.512413b0f4d845273d8de3a6826f257f.js": "/precache-manifest.512413b0f4d845273d8de3a6826f257f.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.030c3e4d.chunk.css.map": "/static/css/2.030c3e4d.chunk.css.map",
-    "static/css/main.3410e775.chunk.css.map": "/static/css/main.3410e775.chunk.css.map",
-    "static/js/2.eeb2d1ec.chunk.js.LICENSE": "/static/js/2.eeb2d1ec.chunk.js.LICENSE",
-    "static/media/index.scss": "/static/media/zw.8b885465.svg"
+    "main.css": "/slickgrid-bare-example/static/css/main.c8287051.chunk.css",
+    "main.js": "/slickgrid-bare-example/static/js/main.e9145665.chunk.js",
+    "main.js.map": "/slickgrid-bare-example/static/js/main.e9145665.chunk.js.map",
+    "runtime-main.js": "/slickgrid-bare-example/static/js/runtime-main.0cabd72a.js",
+    "runtime-main.js.map": "/slickgrid-bare-example/static/js/runtime-main.0cabd72a.js.map",
+    "static/css/2.8e6990bc.chunk.css": "/slickgrid-bare-example/static/css/2.8e6990bc.chunk.css",
+    "static/js/2.eeb2d1ec.chunk.js": "/slickgrid-bare-example/static/js/2.eeb2d1ec.chunk.js",
+    "static/js/2.eeb2d1ec.chunk.js.map": "/slickgrid-bare-example/static/js/2.eeb2d1ec.chunk.js.map",
+    "index.html": "/slickgrid-bare-example/index.html",
+    "precache-manifest.c8b8256a4b5bbee3455d5d88abd49aa2.js": "/slickgrid-bare-example/precache-manifest.c8b8256a4b5bbee3455d5d88abd49aa2.js",
+    "service-worker.js": "/slickgrid-bare-example/service-worker.js",
+    "static/css/2.8e6990bc.chunk.css.map": "/slickgrid-bare-example/static/css/2.8e6990bc.chunk.css.map",
+    "static/css/main.c8287051.chunk.css.map": "/slickgrid-bare-example/static/css/main.c8287051.chunk.css.map",
+    "static/js/2.eeb2d1ec.chunk.js.LICENSE": "/slickgrid-bare-example/static/js/2.eeb2d1ec.chunk.js.LICENSE",
+    "static/media/index.scss": "/slickgrid-bare-example/static/media/zw.8b885465.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4563b125.js",
-    "static/css/2.030c3e4d.chunk.css",
+    "static/js/runtime-main.0cabd72a.js",
+    "static/css/2.8e6990bc.chunk.css",
     "static/js/2.eeb2d1ec.chunk.js",
-    "static/css/main.3410e775.chunk.css",
-    "static/js/main.a8448480.chunk.js"
+    "static/css/main.c8287051.chunk.css",
+    "static/js/main.e9145665.chunk.js"
   ]
 }
