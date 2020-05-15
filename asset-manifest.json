@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/slickgrid-bare-example/static/css/main.c8287051.chunk.css",
-    "main.js": "/slickgrid-bare-example/static/js/main.8892384e.chunk.js",
-    "main.js.map": "/slickgrid-bare-example/static/js/main.8892384e.chunk.js.map",
+    "main.css": "/slickgrid-bare-example/static/css/main.c6f307bd.chunk.css",
+    "main.js": "/slickgrid-bare-example/static/js/main.0ff0bd7d.chunk.js",
+    "main.js.map": "/slickgrid-bare-example/static/js/main.0ff0bd7d.chunk.js.map",
     "runtime-main.js": "/slickgrid-bare-example/static/js/runtime-main.0cabd72a.js",
     "runtime-main.js.map": "/slickgrid-bare-example/static/js/runtime-main.0cabd72a.js.map",
     "static/css/2.8e6990bc.chunk.css": "/slickgrid-bare-example/static/css/2.8e6990bc.chunk.css",
-    "static/js/2.eeb2d1ec.chunk.js": "/slickgrid-bare-example/static/js/2.eeb2d1ec.chunk.js",
-    "static/js/2.eeb2d1ec.chunk.js.map": "/slickgrid-bare-example/static/js/2.eeb2d1ec.chunk.js.map",
+    "static/js/2.7523df45.chunk.js": "/slickgrid-bare-example/static/js/2.7523df45.chunk.js",
+    "static/js/2.7523df45.chunk.js.map": "/slickgrid-bare-example/static/js/2.7523df45.chunk.js.map",
     "index.html": "/slickgrid-bare-example/index.html",
-    "precache-manifest.bd314d34a81ea051b06742e71dfa8b1f.js": "/slickgrid-bare-example/precache-manifest.bd314d34a81ea051b06742e71dfa8b1f.js",
+    "precache-manifest.d5d3914b85d18596528c53027d092557.js": "/slickgrid-bare-example/precache-manifest.d5d3914b85d18596528c53027d092557.js",
     "service-worker.js": "/slickgrid-bare-example/service-worker.js",
     "static/css/2.8e6990bc.chunk.css.map": "/slickgrid-bare-example/static/css/2.8e6990bc.chunk.css.map",
-    "static/css/main.c8287051.chunk.css.map": "/slickgrid-bare-example/static/css/main.c8287051.chunk.css.map",
-    "static/js/2.eeb2d1ec.chunk.js.LICENSE": "/slickgrid-bare-example/static/js/2.eeb2d1ec.chunk.js.LICENSE",
+    "static/css/main.c6f307bd.chunk.css.map": "/slickgrid-bare-example/static/css/main.c6f307bd.chunk.css.map",
+    "static/js/2.7523df45.chunk.js.LICENSE": "/slickgrid-bare-example/static/js/2.7523df45.chunk.js.LICENSE",
     "static/media/index.scss": "/slickgrid-bare-example/static/media/zw.8b885465.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.0cabd72a.js",
     "static/css/2.8e6990bc.chunk.css",
-    "static/js/2.eeb2d1ec.chunk.js",
-    "static/css/main.c8287051.chunk.css",
-    "static/js/main.8892384e.chunk.js"
+    "static/js/2.7523df45.chunk.js",
+    "static/css/main.c6f307bd.chunk.css",
+    "static/js/main.0ff0bd7d.chunk.js"
   ]
 }
